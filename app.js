@@ -91,6 +91,11 @@ app.use((req,res,next)=>{
 }
 );
 
+app.get("/", (req, res) => {
+  res.render("/listings"); 
+});
+
+
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
